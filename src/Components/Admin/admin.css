@@ -1,0 +1,12 @@
+.wrapper {
+  background: var(--bodyColor) !important;
+}
+.wrapper .main {
+  margin-top: 10vh !important;
+  margin-left: 4rem;
+  background: var(--bodyColor) !important;
+}
+.fixed {
+  position: absolute;
+  height: 345vh !important;
+}

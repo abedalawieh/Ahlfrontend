@@ -1,0 +1,110 @@
+:root {
+  --PrimaryColor: hsl(199, 100%, 33%);
+  --SecondaryColor: hsl(187, 85%, 43%);
+  --gradientColor: linear-gradient(
+    to right,
+    hsl(187, 85%, 43%),
+    hsl(199, 100%, 33%)
+  );
+  --whiteColor: hsl(0, 0%, 100%);
+  --blackColor: hsl(201, 33%, 16%);
+  --textColor: hsl(240, 4%, 36%);
+  --whiteColorDream: hsl(0, 0%, 93%);
+  --greyText: rgb(190, 190, 190);
+  --inputColor: rgb(239, 239, 239);
+  --bodyColor: rgb(240, 240, 246);
+  --cardBG: rgb(225, 225, 235);
+  --cardHover: rgb(255, 255, 255);
+}
+.h3 {
+  margin-top: 2%;
+}
+.h3 strong {
+  color: var(--blackColor) !important;
+  font-weight: 700;
+  font-size: 35px;
+}
+.h3 span {
+  color: var(--blackColor) !important;
+  font-size: 35px;
+}
+.row .card {
+  box-shadow: 0 0 10px rgba(68, 68, 68, 0.45);
+}
+.row h5 {
+  color: var(--textColor);
+  font-size: 20px;
+  font-weight: 700;
+}
+.row .dashboard-icon {
+  font-size: 40px;
+}
+.guest-main.pending-deleted-posts {
+  background: transparent !important;
+}
+.secTitle .title {
+  color: var(--textColor) !important;
+}
+.secTitle.title {
+  width: 200px;
+}
+.admin-buttons-div {
+  display: flex;
+  flex-direction: row;
+}
+.icon-reject {
+  background: linear-gradient(to right, #ff416c, #ff4b2b);
+  color: white;
+  font-weight: 600;
+}
+.admin-accept-icon {
+  color: white;
+}
+.icon-posts {
+  background: linear-gradient(to right, #ff416c, #ff4b2b);
+  color: white;
+  margin-left: 12%;
+}
+.deleted-posts-icon {
+  border: none;
+  margin-left: 1%;
+  color: #ff4757;
+}
+.accepted-posts-icon {
+  border: none;
+  color: #23ad5c;
+}
+.site-providers-icon {
+  border: none;
+  transform: translateX(10px);
+  color: #0d6efd;
+}
+.imagediv {
+  transform: translateY(10px);
+  height: 100px;
+  width: 100px;
+}
+.imagediv img {
+  height: 80px;
+  width: 110px;
+}
+.font {
+  font-size: 30px;
+}
+.fixed {
+  position: fixed;
+  top: 10vh;
+  left: 0;
+  z-index: 200;
+}
+.accepted-posts-table {
+  height: 55vh;
+  overflow: scroll;
+}
+.site-providers-table {
+  height: 30vh;
+  overflow: scroll;
+}
+.site-providers-title {
+  margin-top: 3%;
+}

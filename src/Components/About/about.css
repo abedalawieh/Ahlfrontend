@@ -1,0 +1,136 @@
+:root{
+    --PrimaryColor: hsl(199, 100%, 33%);
+    --SecondaryColor: hsl(187, 85%, 43%);
+    --gradientColor: linear-gradient(to right, hsl(187, 85%, 43%), hsl(199, 100%, 33%));
+    --whiteColor: hsl(0, 0%, 100%);
+    --blackColor: hsl(201, 33%, 16%);
+    --textColor: hsl(240, 4%, 36%);
+    --whiteColorDream: hsl(0, 0%, 93%);
+    --greyText: rgb(190, 190, 190);
+    --inputColor: rgb(239, 239, 239);
+    --bodyColor: rgb(240, 240, 246);
+    --cardBG: rgb(225, 225, 235);
+}
+
+    .about{
+        width: 100%;
+        position: relative;
+        padding: 2rem 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: auto;
+    }
+
+    .about .contentDiv{
+        justify-content: space-between;
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .about .contentDiv h1{
+        margin-top: 10vh;
+        font-size: 50px;
+        font-weight: 600;
+        color: var(--blackColor);
+        text-align: center;
+    }
+
+    .about .contentDiv p{
+        font-size: 20px;
+        text-align: center;
+        font-weight: 400;
+    }
+
+    .about .contentDiv p span{
+        color: var(--SecondaryColor);
+        font-weight: 600;
+    }
+
+    .about .contentDiv .aboutUsDiv{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-top: 3rem;
+    }
+
+    .about .contentDiv .aboutUsDiv .aboutUs-text{
+        width: 45%;
+        text-align: start;
+        font-size: 1.1rem;
+    }
+
+    .about .contentDiv .aboutUsDiv .aboutUs-text h2{
+        padding-bottom: 1rem;
+        font-weight: 600;
+        color: var(--blackColor) ;
+    }
+
+    .about .contentDiv .aboutUsDiv .aboutUs-text p{
+        text-align: start;
+        font-size: 1rem;
+    }
+
+
+    .about .contentDiv .aboutUsDiv .aboutUs-images{
+        position: sticky;
+        width: 50%;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .about .contentDiv .aboutUsDiv .aboutUs-images img{
+        width: 49%;
+        height: 350px;
+        object-fit: cover;
+        border-radius: 6px;
+        box-shadow: -1px 1px 62px -18px rgba(0,0,0,0.19);
+    }
+
+    .about .contentDiv .aboutUsDiv .aboutUs-images img:hover{
+        cursor: pointer;
+        transform: translateY(-10px);
+        box-shadow: -1px 1px 62px -18px rgba(0,0,0,0.19);
+    }
+
+    .about .contentDiv .aboutUsDiv .aboutUs-images img:nth-child(2){
+        position: absolute;
+        top: -10%;
+        right: 0;
+    }
+
+/* media queries */
+@media screen and (max-width: 605px) {
+    .about{
+        height: auto;
+        width: auto;
+        position: relative;
+        padding: 2rem 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        /* margin: 4rem 2rem; */
+    }
+    .about .contentDiv{
+        margin: 1rem 1.5rem 1.5rem 1.5rem;
+    }
+
+    .about .contentDiv .aboutUsDiv{
+        display: flex;
+        flex-direction: column-reverse;
+        margin-top: 3rem;
+    }
+
+    .about .contentDiv .aboutUsDiv .aboutUs-text{
+        width: 100%;
+    }
+
+    .about .contentDiv .aboutUsDiv .aboutUs-images{
+        width: 100%;
+        margin: 1.8rem 0;
+    }
+
+    .about .contentDiv .aboutUsDiv .aboutUs-images img{
+        height: 300px;
+    }
+}

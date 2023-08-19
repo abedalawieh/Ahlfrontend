@@ -1,0 +1,325 @@
+:root {
+  --PrimaryColor: hsl(199, 100%, 33%);
+  --SecondaryColor: hsl(187, 85%, 43%);
+  --gradientColor: linear-gradient(
+    to right,
+    hsl(187, 85%, 43%),
+    hsl(199, 100%, 33%)
+  );
+  --whiteColor: hsl(0, 0%, 100%);
+  --blackColor: hsl(201, 33%, 16%);
+  --textColor: hsl(240, 4%, 36%);
+  --whiteColorDream: hsl(0, 0%, 93%);
+  --greyText: rgb(190, 190, 190);
+  --inputColor: rgb(239, 239, 239);
+  --bodyColor: rgb(240, 240, 246);
+  --cardBG: rgb(225, 225, 235);
+}
+.user-section {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 150vh;
+}
+.user-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  width: 100%;
+  margin-left: 2%;
+  margin-right: 2%;
+  background: rgba(24, 56, 54, 0.2);
+  box-shadow: 20px 20px 20px rgba(48, 48, 48, 0.5);
+  border: 3px solid rgba(255, 255, 255, 0.25);
+  border-right: 3px solid rgba(255, 255, 255, 0.1);
+  border-bottom: 3px solid rgba(255, 255, 255, 0.25);
+  border-radius: 15px;
+  overflow: hidden;
+  backdrop-filter: blur(20px);
+  margin-top: 10vh;
+}
+.user-info::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -40%;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.15);
+  transform: skewX(-15deg);
+}
+.user-info h2 {
+  color: var(--blackColor);
+}
+.user-info .user-pfp-div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: var(--blackColor);
+  font-weight: 600;
+}
+.user-info .user-pfp-div .user-pfp {
+  height: 300px;
+  width: 300px;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.85);
+  padding: 3%;
+}
+.user-info .user-pfp-div .edit-pfp {
+  font-size: 27px;
+  height: 45px;
+  width: 45px;
+  border-radius: 50%;
+  transform: translate(80px, -60px);
+  border: 2px solid var(--blackColor);
+  background: var(--whiteColorDream);
+}
+.user-info .user-pfp-div .edit-pfp:hover {
+  background: var(--gradientColor);
+  color: var(--whiteColorDream);
+  border: 2px solid var(--whiteColorDream);
+}
+.user-info .user-pfp-div p {
+  color: var(--blackColor);
+  transform: translateY(-30px);
+}
+.user-info .user-pfp-div .update-pfp {
+  font-weight: 600;
+  color: var(--blackColor);
+  background: var(--whiteColorDream);
+  transform: translateY(-30px);
+  border: 2px solid var(--blackColor);
+}
+.user-info .user-pfp-div .update-pfp:hover {
+  background: var(--gradientColor);
+  color: var(--whiteColorDream);
+  border: 2px solid var(--whiteColorDream);
+}
+.user-info .user-about {
+  display: flex;
+  flex-direction: column;
+}
+.user-info .user-about .about-item {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  font-size: 20px;
+  margin-bottom: 5%;
+}
+.user-info .user-about .about-item .about-item-icon {
+  width: 150px;
+  font-size: 40px;
+}
+.user-info .user-about .about-item .about-item-text {
+  width: 100%;
+}
+.edit-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  width: 100%;
+  margin-left: 2%;
+  margin-right: 2%;
+  background: rgba(24, 56, 54, 0.2);
+  box-shadow: 20px 20px 20px rgba(48, 48, 48, 0.5);
+  border: 3px solid rgba(255, 255, 255, 0.25);
+  border-right: 3px solid rgba(255, 255, 255, 0.1);
+  border-bottom: 3px solid rgba(255, 255, 255, 0.25);
+  border-radius: 15px;
+  overflow: hidden;
+  backdrop-filter: blur(20px);
+  margin-top: 10vh;
+}
+.edit-info-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  grid-column: 1/2;
+  grid-row: 1/2;
+  padding: 0 5rem;
+  overflow: hidden;
+}
+.edit-info .edit-info-form h2 {
+  color: var(--blackColor);
+  margin-top: 2%;
+}
+.edit-info .edit-info-form .edit-info-item {
+  max-width: 380px;
+  width: 100%;
+  height: 55px;
+  background-color: var(--whiteColor);
+  margin: 10px 0;
+  border-radius: 55px;
+  display: grid;
+  grid-template-columns: 15% 85%;
+  padding: 0 0.4rem;
+}
+.edit-info .edit-info-form .edit-info-item input {
+  background: none;
+  outline: none;
+  border: none;
+  line-height: 1;
+  font-weight: 600;
+  font-size: 1.1rem;
+  color: var(--textColor);
+}
+.edit-info .edit-info-form .edit-info-item input::placeholder {
+  color: var(--textColor);
+  font-weight: 500;
+}
+.edit-info .edit-info-form .edit-info-item .edit-info-icon {
+  align-self: center;
+  line-height: 55px;
+  color: var(--blackColor);
+  font-size: 1.4rem;
+}
+.edit-info .edit-info-form .edit-info-item .edit-info-email {
+  align-self: center;
+  width: 100%;
+}
+.edit-info .edit-info-form .edit-info-item .edit-info-email input {
+  float: left;
+  width: 85%;
+}
+.edit-info .edit-info-form .edit-info-item .edit-info-email span {
+  float: right;
+  padding-right: 2%;
+}
+.edit-info
+  .edit-info-form
+  .edit-info-item
+  .edit-info-email
+  span
+  .edit-info-icon.wrong-email {
+  color: #ff4757;
+  font-size: 27px;
+}
+.edit-info
+  .edit-info-form
+  .edit-info-item
+  .edit-info-email
+  span
+  .edit-info-icon.correct-email {
+  color: #23ad5c;
+  font-size: 27px;
+}
+.edit-info .edit-info-form .edit-info-item .edit-info-pass {
+  align-self: center;
+  width: 100%;
+}
+.edit-info .edit-info-form .edit-info-item .edit-info-pass input {
+  float: left;
+  width: 85%;
+}
+.edit-info .edit-info-form .edit-info-item .edit-info-pass span {
+  cursor: pointer;
+  float: right;
+  padding-right: 2%;
+}
+form .indicator {
+  width: 80%;
+  height: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 10px 0;
+  display: none;
+}
+
+form .indicator span {
+  width: 100%;
+  height: 100%;
+  background: lightgray;
+  border-radius: 5px;
+  position: relative;
+}
+
+form .indicator span:nth-child(2) {
+  margin: 0 3px;
+}
+
+form .indicator span.active:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 5px;
+}
+
+form .indicator span.weak:before {
+  background-color: #ff4757;
+}
+
+form .indicator span.active.medium:before {
+  background-color: orange;
+}
+
+form .indicator span.active.strong:before {
+  background-color: #23ad5c;
+}
+
+form .pass-text {
+  font-size: 20px;
+  font-weight: 500;
+  display: none;
+}
+
+form .pass-text.weak {
+  color: #ff4757;
+}
+
+form .pass-text.medium {
+  color: orange;
+}
+
+form .pass-text.strong {
+  color: #23ad5c;
+}
+.edit-info .edit-info-form .edit-info-item-area {
+  max-width: 380px;
+  width: 100%;
+  height: 200px;
+  background-color: var(--whiteColor);
+  margin: 10px 0;
+  border-radius: 55px;
+  display: grid;
+  grid-template-columns: 15% 85%;
+  padding: 0 0.4rem;
+}
+.edit-info .edit-info-form .edit-info-item-area input::placeholder {
+  color: var(--textColor);
+  font-weight: 500;
+}
+.edit-info .edit-info-form .edit-info-item-area .edit-info-icon {
+  align-self: center;
+  line-height: 55px;
+  color: var(--blackColor);
+  font-size: 1.4rem;
+}
+.edit-info .edit-info-form .edit-info-item-area textarea {
+  margin-top: 2%;
+  background: none;
+  outline: none;
+  border: none;
+  font-weight: 600;
+  font-size: 1.1rem;
+  color: var(--textColor);
+}
+.edit-info .edit-info-form .edit-info-button {
+  color: var(--whiteColorDream);
+  font-weight: 600;
+}
+.edit-info .edit-info-form .edit-info-button:hover {
+  background: var(--PrimaryColor);
+}

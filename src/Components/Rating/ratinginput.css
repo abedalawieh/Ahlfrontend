@@ -1,0 +1,42 @@
+:root {
+  --PrimaryColor: hsl(199, 100%, 33%);
+  --SecondaryColor: hsl(187, 85%, 43%);
+  --gradientColor: linear-gradient(
+    to right,
+    hsl(187, 85%, 43%),
+    hsl(199, 100%, 33%)
+  );
+  --whiteColor: hsl(0, 0%, 100%);
+  --blackColor: hsl(201, 33%, 16%);
+  --textColor: hsl(240, 4%, 36%);
+  --whiteColorDream: hsl(0, 0%, 93%);
+  --greyText: rgb(190, 190, 190);
+  --inputColor: rgb(239, 239, 239);
+  --bodyColor: rgb(240, 240, 246);
+  --cardBG: rgb(225, 225, 235);
+  --cardHover: rgb(255, 255, 255);
+}
+.input-rating {
+  color: var(--whiteColorDream);
+  width: 580px;
+  height: 130px;
+  justify-self: center;
+  background: #3d3d3d;
+  padding-top: 3%;
+  border-radius: 10px;
+  text-align: center;
+  text-justify: center;
+  font-weight: 700;
+  font-size: 30px;
+}
+.rating-input-text {
+  font-weight: 700;
+  font-size: 25px;
+  color: var(--whiteColorDream);
+}
+.rating-input-stars {
+  font-size: 30px;
+}
+.rating-input-stars:hover {
+  cursor: pointer;
+}

@@ -1,0 +1,506 @@
+:root {
+  --PrimaryColor: hsl(199, 100%, 33%);
+  --SecondaryColor: hsl(187, 85%, 43%);
+  --gradientColor: linear-gradient(
+    to right,
+    hsl(187, 85%, 43%),
+    hsl(199, 100%, 33%)
+  );
+  --whiteColor: hsl(0, 0%, 100%);
+  --blackColor: hsl(201, 33%, 16%);
+  --textColor: hsl(240, 4%, 36%);
+  --whiteColorDream: hsl(0, 0%, 93%);
+  --greyText: rgb(190, 190, 190);
+  --inputColor: rgb(239, 239, 239);
+  --bodyColor: rgb(240, 240, 246);
+  --cardBG: rgb(225, 225, 235);
+}
+
+h3 {
+  color: var(--whiteColorDream) !important;
+}
+
+.registration {
+  width: 100%;
+  min-height: 100vh;
+  position: relative;
+  overflow: hidden;
+}
+
+.registration:before {
+  content: "";
+  position: absolute;
+  width: 2000px;
+  height: 2000px;
+  border-radius: 50%;
+  background: linear-gradient(-45deg, #10b5cb, #0073a8);
+  top: -10%;
+  right: 48%;
+  transform: translateY(-50%);
+  z-index: 6;
+  transition: 1.8s ease-in-out;
+}
+
+.forms-container {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+
+.signin-singup {
+  position: absolute;
+  top: 50%;
+  left: 75%;
+  width: 50%;
+  transform: translate(-50%, -50%);
+  display: grid;
+  grid-template-columns: 1fr;
+  z-index: 5;
+  transition: 1s 0.7s ease-in-out;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  grid-column: 1/2;
+  grid-row: 1/2;
+  padding: 0 5rem;
+  overflow: hidden;
+  transition: 0.2s 0.7s ease-in-out;
+}
+
+form.sign-in-form {
+  z-index: 2;
+}
+
+form.sign-up-form {
+  z-index: 1;
+  opacity: 0;
+}
+
+.forgot {
+  text-align: center;
+  color: var(--textColor) !important;
+  font-weight: 400;
+}
+
+.forgot:hover {
+  text-decoration: underline !important;
+  font-weight: 600;
+}
+
+.login-message {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-weight: 700;
+}
+
+.login-message .message-icon {
+  font-size: 40px;
+}
+
+.title {
+  font-size: 2.2rem;
+  color: var(--blackColor);
+  margin-bottom: 10px;
+  font-weight: 700;
+}
+
+.input-field {
+  max-width: 380px;
+  width: 100%;
+  height: 55px;
+  background-color: var(--whiteColor);
+  margin: 10px 0;
+  border-radius: 55px;
+  display: grid;
+  grid-template-columns: 15% 85%;
+  padding: 0 0.4rem;
+}
+
+.input-field .login-signup-icon {
+  align-self: center;
+  line-height: 55px;
+  color: var(--blackColor);
+  font-size: 1.4rem;
+}
+
+.input-field .email-input {
+  align-self: center;
+}
+
+.input-field .email-input span {
+  float: right;
+  padding-right: 2%;
+}
+
+.input-field .email-input span .login-signup-icon.wrong {
+  color: #ff4757;
+  font-size: 27px;
+}
+
+.input-field .email-input span .login-signup-icon.correct {
+  color: #23ad5c;
+  font-size: 27px;
+}
+
+.input-field .pass-input {
+  align-self: center;
+}
+
+.input-field .pass-input span {
+  cursor: pointer;
+  float: right;
+  padding-right: 2%;
+}
+
+form .indicator {
+  width: 80%;
+  height: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 10px 0;
+  display: none;
+}
+
+form .indicator span {
+  width: 100%;
+  height: 100%;
+  background: lightgray;
+  border-radius: 5px;
+  position: relative;
+}
+
+form .indicator span:nth-child(2) {
+  margin: 0 3px;
+}
+
+form .indicator span.active:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 5px;
+}
+
+form .indicator span.weak:before {
+  background-color: #ff4757;
+}
+
+form .indicator span.active.medium:before {
+  background-color: orange;
+}
+
+form .indicator span.active.strong:before {
+  background-color: #23ad5c;
+}
+
+form .pass-text {
+  font-size: 20px;
+  font-weight: 500;
+  display: none;
+}
+
+form .pass-text.weak {
+  color: #ff4757;
+}
+
+form .pass-text.medium {
+  color: orange;
+}
+
+form .pass-text.strong {
+  color: #23ad5c;
+}
+
+form .pass-match-text {
+  font-size: 20px;
+  font-weight: 500;
+  display: none;
+}
+
+.input-field input {
+  background: none;
+  outline: none;
+  border: none;
+  line-height: 1;
+  font-weight: 600;
+  font-size: 1.1rem;
+  color: var(--textColor);
+}
+
+.input-field input::placeholder {
+  color: var(--textColor);
+  font-weight: 500;
+}
+
+.login-signup-btn {
+  width: 150px;
+  height: 49px;
+  border-radius: 49px;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  background-color: var(--SecondaryColor);
+  color: whitesmoke;
+  text-transform: uppercase;
+  font-weight: 600;
+  margin: 10px 0;
+  transform: 0.5s;
+}
+
+.login-signup-btn:hover {
+  background-color: #14c0d7;
+}
+
+.panels-container {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.panel {
+  display: flex;
+  margin-top: 5vh;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: space-around;
+  text-align: center;
+  z-index: 7;
+}
+
+.left-panel {
+  pointer-events: all;
+  padding: 3rem 17% 2rem 12%;
+}
+
+.right-panel {
+  pointer-events: none;
+  padding: 3rem 17% 2rem 17%;
+}
+
+.panel .content {
+  color: var(--whiteColorDream);
+  transition: 1.1s 0.4s ease-in-out;
+}
+
+.panel h3 {
+  font-weight: 600;
+  line-height: 1;
+  font-size: 1.5rem;
+}
+
+.panel p {
+  font-size: 0.95rem;
+  padding: 0.7rem 0;
+}
+
+.login-signup-btn.transparent {
+  margin: 0;
+  background: none;
+  border: 2px solid var(--whiteColorDream);
+  width: 130px;
+  height: 41px;
+  font-weight: 600;
+  font-size: 0.8rem;
+}
+
+.image {
+  width: 100%;
+  transition: 1.1s 0.4s ease-in-out;
+}
+
+.right-panel .content,
+.right-panel .image {
+  transform: translateX(800px);
+}
+
+/* animation */
+
+.registration.sign-up-mode:before {
+  transform: translate(100%, -50%);
+  right: 52%;
+}
+
+.registration.sign-up-mode .left-panel .image,
+.registration.sign-up-mode .left-panel .content {
+  transform: translateX(-800px);
+}
+
+.registration.sign-up-mode .right-panel .image,
+.registration.sign-up-mode .right-panel .content {
+  transform: translateX(0px);
+}
+
+.registration.sign-up-mode .left-panel {
+  pointer-events: none;
+}
+
+.registration.sign-up-mode .right-panel {
+  pointer-events: all;
+}
+
+.registration.sign-up-mode .signin-singup {
+  left: 25%;
+}
+
+.registration.sign-up-mode form.sign-in-form {
+  z-index: 1;
+  opacity: 0;
+}
+
+.registration.sign-up-mode form.sign-up-form {
+  z-index: 2;
+  opacity: 1;
+}
+
+/* media queries */
+@media (max-width: 870px) {
+  .registration {
+    min-height: 800px;
+    height: 100vh;
+  }
+
+  .registration:before {
+    width: 1500px;
+    height: 1500px;
+    left: 30%;
+    bottom: 68%;
+    transform: translateX(-50%);
+    right: initial;
+    top: initial;
+    transition: 2s ease-in-out;
+  }
+
+  .signin-singup {
+    width: 100%;
+    left: 50%;
+    top: 95%;
+    transform: translate(-50%, -100%);
+    transition: 1s 0.8s ease-in-out;
+  }
+
+  .sign-up-form {
+    margin-top: 15%;
+  }
+
+  .panels-container {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 2fr 1fr;
+  }
+
+  .panel {
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    padding: 2.5rem 8%;
+  }
+
+  .panel .content {
+    padding-right: 15%;
+    transition: 0.9s 0.8s ease-in-out;
+  }
+
+  .panel h3 {
+    font-size: 1.2rem;
+  }
+
+  .panel p {
+    font-size: 0.7rem;
+    padding: 0.5rem 0;
+  }
+
+  .login-signup-btn.transparent {
+    width: 110px;
+    height: 35px;
+    font-size: 0.7rem;
+  }
+
+  .image {
+    width: 200px;
+    transition: 0.9s 0.6s ease-in-out;
+  }
+
+  .left-panel {
+    margin-top: 12%;
+    grid-row: 1/2;
+  }
+
+  .right-panel {
+    margin-top: 10%;
+    grid-row: 3/4;
+  }
+
+  .right-panel .content,
+  .right-panel .image {
+    transform: translateY(300px);
+  }
+
+  .registration.sign-up-mode:before {
+    transform: translate(-50%, 100%);
+    bottom: 27%;
+    right: initial;
+  }
+
+  .registration.sign-up-mode .left-panel .image,
+  .registration.sign-up-mode .left-panel .content {
+    transform: translateY(-300px);
+  }
+
+  .registration.sign-up-mode .signin-singup {
+    top: 5%;
+    transform: translate(-50%, 0);
+    left: 50%;
+  }
+}
+
+@media (max-width: 570px) {
+  .registration {
+    min-height: 800px;
+    height: 100vh;
+  }
+
+  .registration:before {
+    bottom: 72%;
+    left: 50%;
+  }
+
+  form {
+    padding: 0 1.5rem;
+  }
+
+  .image {
+    display: none;
+  }
+
+  .panel {
+    margin-top: 5vh;
+  }
+
+  .left-panel .content {
+    padding: 0.2rem 1rem;
+  }
+
+  .right-panel .content {
+    padding: 0.1rem;
+  }
+
+  .registration.sign-up-mode:before {
+    bottom: 22%;
+    left: 50%;
+  }
+}

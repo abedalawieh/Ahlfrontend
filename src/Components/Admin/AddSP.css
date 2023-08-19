@@ -1,0 +1,19 @@
+.registrations {
+  width: 100%;
+  min-height: 60vh;
+  position: relative;
+  overflow: hidden;
+}
+.registrations form.sign-up-form {
+  margin-top: 1.5rem;
+  z-index: 1;
+  opacity: 10;
+  transform: translate(-550px, -40px);
+}
+
+.right {
+  position: absolute !important;
+  left: 40vw !important;
+  width: 100vw !important;
+  top: 3% !important;
+}

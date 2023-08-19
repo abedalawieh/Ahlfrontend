@@ -1,0 +1,38 @@
+:root {
+  --PrimaryColor: hsl(199, 100%, 33%);
+  --SecondaryColor: hsl(187, 85%, 43%);
+  --gradientColor: linear-gradient(
+    to right,
+    hsl(187, 85%, 43%),
+    hsl(199, 100%, 33%)
+  );
+  --whiteColor: hsl(0, 0%, 100%);
+  --blackColor: hsl(201, 33%, 16%);
+  --textColor: hsl(240, 4%, 36%);
+  --whiteColorDream: hsl(0, 0%, 93%);
+  --greyText: rgb(190, 190, 190);
+  --inputColor: rgb(239, 239, 239);
+  --bodyColor: rgb(240, 240, 246);
+  --cardBG: rgb(225, 225, 235);
+  --cardHover: rgb(255, 255, 255);
+}
+.calendar-container {
+  transform: translateY(60px);
+}
+.react-calendar {
+  border-radius: 15px 15px 15px;
+  background: #5d5959;
+}
+.react-calendar__navigation__arrow {
+  color: var(--whiteColorDream);
+}
+.react-calendar__navigation__label {
+  color: var(--whiteColorDream);
+}
+.react-calendar__month-view__weekdays {
+  color: var(--whiteColorDream);
+}
+.react-calendar__tile::selection {
+  color: var(--whiteColorDream);
+  text-decoration: none !important;
+}

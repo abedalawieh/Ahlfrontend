@@ -1,0 +1,155 @@
+:root {
+  --PrimaryColor: hsl(199, 100%, 33%);
+  --SecondaryColor: hsl(187, 85%, 43%);
+  --gradientColor: linear-gradient(
+    to right,
+    hsl(187, 85%, 43%),
+    hsl(199, 100%, 33%)
+  );
+  --whiteColor: hsl(0, 0%, 100%);
+  --blackColor: hsl(201, 33%, 16%);
+  --textColor: hsl(240, 4%, 36%);
+  --whiteColorDream: hsl(0, 0%, 93%);
+  --greyText: rgb(190, 190, 190);
+  --inputColor: rgb(239, 239, 239);
+  --bodyColor: rgb(240, 240, 246);
+  --cardBG: rgb(225, 225, 235);
+}
+.otp-container {
+  height: 90vh;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  justify-content: center !important;
+  background: transparent !important;
+  padding: 20px !important;
+}
+.otp-container::before {
+  content: "";
+  position: absolute;
+  width: 400px;
+  height: 400px;
+  background: linear-gradient(#d61616, #74f7ff);
+  border-radius: 50%;
+  transform: translate(-420px, -120px);
+}
+.otp-container::after {
+  content: "";
+  position: absolute;
+  width: 350px;
+  height: 350px;
+  background: linear-gradient(#0ba8ff, #15d846);
+  border-radius: 50%;
+  transform: translate(400px, 180px);
+}
+.otp-container .otp-items-container {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  justify-content: center !important;
+  background: transparent !important;
+  position: relative;
+  z-index: 1000;
+  width: 100%;
+  max-width: 1000px;
+  padding: 50px;
+  background: rgba(0, 0, 0, 0.8);
+  box-shadow: 0 25px 25px rgba(48, 48, 48, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  border-right: 1px solid rgba(255, 255, 255, 0.1);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.25);
+  border-radius: 10px;
+  overflow: hidden;
+  backdrop-filter: blur(20px);
+}
+.otp-container .otp-items-container .otp-form-container {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  justify-content: center !important;
+  background: transparent !important;
+}
+.otp-container .otp-items-container .otp-form-container .otp-text {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  justify-content: center !important;
+}
+.otp-container .otp-items-container .otp-form-container .otp-text .otp-title {
+  color: var(--blackColor);
+  font-size: 50px;
+  font-weight: 600;
+}
+.otp-container
+  .otp-items-container
+  .otp-form-container
+  .otp-text
+  .otp-sentEmail-text {
+  color: var(--blackColor);
+  font-size: 20px;
+  font-weight: 500;
+}
+.otp-container .otp-items-container .otp-form-container .otp-recovery-form {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  justify-content: center !important;
+}
+.otp-recovery-form .otp-code-input {
+  max-width: 380px;
+  width: 100%;
+  height: 55px;
+  background-color: var(--whiteColor);
+  margin: 10px 0;
+  border-radius: 55px;
+  display: grid;
+  grid-template-columns: 15% 85%;
+  padding: 0 0.4rem;
+}
+.otp-recovery-form .otp-code-input input {
+  background: none;
+  outline: none;
+  border: none;
+  line-height: 1;
+  font-weight: 600;
+  font-size: 1.1rem;
+  color: var(--textColor);
+}
+.otp-recovery-form .otp-code-input input::placeholder {
+  color: var(--textColor);
+  font-weight: 500;
+}
+.otp-recovery-form .otp-code-input .otp-icon {
+  align-self: center;
+  line-height: 55px;
+  color: var(--blackColor);
+  font-size: 1.7rem;
+}
+.otp-verify-btn {
+  width: 150px;
+  height: 49px;
+  border-radius: 49px;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  background-color: var(--SecondaryColor);
+  color: whitesmoke;
+  font-weight: 600;
+  margin: 10px 0;
+  transform: 0.5s;
+}
+.otp-verify-btn:hover {
+  background-color: #14c0d7;
+}
+.otp-recovery-form .otp-links {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  justify-content: center !important;
+}
+.otp-recovery-form .otp-links .otp-codes-div {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  justify-content: center !important;
+}

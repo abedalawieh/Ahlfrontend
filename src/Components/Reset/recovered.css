@@ -1,0 +1,59 @@
+:root {
+  --PrimaryColor: hsl(199, 100%, 33%);
+  --SecondaryColor: hsl(187, 85%, 43%);
+  --gradientColor: linear-gradient(
+    to right,
+    hsl(187, 85%, 43%),
+    hsl(199, 100%, 33%)
+  );
+  --whiteColor: hsl(0, 0%, 100%);
+  --blackColor: hsl(201, 33%, 16%);
+  --textColor: hsl(240, 4%, 36%);
+  --whiteColorDream: hsl(0, 0%, 93%);
+  --greyText: rgb(190, 190, 190);
+  --inputColor: rgb(239, 239, 239);
+  --bodyColor: rgb(240, 240, 246);
+  --cardBG: rgb(225, 225, 235);
+}
+
+.recovered-section {
+  height: 90vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.recovered-section .recovered-items-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.recovered-section .recovered-items-container .recovered-image {
+  width: 400px;
+  height: 400px;
+}
+.recovered-section .recovered-items-container .recovered-texts-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.recovered-section
+  .recovered-items-container
+  .recovered-texts-container
+  .recovered-success-msg
+  h1 {
+  color: var(--blackColor) !important;
+  font-size: 30px !important;
+  font-weight: 600 !important;
+}
+.recovered-section
+  .recovered-items-container
+  .recovered-texts-container
+  .recovered-welcome-msg
+  h2 {
+  font-weight: bold;
+  color: var(--greyText) !important;
+  font-size: 40px !important;
+}
