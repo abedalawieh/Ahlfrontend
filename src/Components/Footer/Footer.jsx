@@ -10,7 +10,7 @@ import './footer.css'
 import Socials from '../Socials/Socials'
 
 //importing assets
-import backgroundVidFooter from '../../Assets/backgroundVidFooter.mp4'
+
 
 //importing used icons
 import {FiSend} from 'react-icons/fi'
@@ -32,7 +32,7 @@ function Footer() {
     <>
       <section className="footer">
         <div className="videoDiv">
-          <video src={backgroundVidFooter} loop autoPlay muted type="video/mp4"></video>
+
         </div>
 
         <div className="secContent container">

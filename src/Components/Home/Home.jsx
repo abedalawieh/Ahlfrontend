@@ -11,7 +11,6 @@ import Banner from "../Banner/Banner";
 import About from "../About/About";
 
 //importing assets
-import backgroundVidHome from "../../Assets/backgroundVidHome.mp4";
 
 //importing used icons
 import { ImSearch } from "react-icons/im";
@@ -46,13 +45,7 @@ function Home() {
 
       <section className="home">
         <div className="overlay"></div>
-        <video
-          src={backgroundVidHome}
-          muted
-          autoPlay
-          loop
-          type="video/mp4"
-        ></video>
+    
 
         <div className="homeContent container">
           <div className="textDiv">
