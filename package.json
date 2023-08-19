@@ -53,5 +53,5 @@
     "@svgr/webpack": "^7.0.0",
     "@types/aos": "^3.0.4"
   },
-  "proxy": "https://ahlbackendd.onrender.com/api/"
+  "proxy": "https://ahlbackendd.onrender.com/api"
 }
