@@ -217,7 +217,7 @@ function App() {
             }
           />
           <Route
-            path="/adminsigninhadiabedwill"
+            path="/adminsignin"
             element={
               <>
                 <Adminsignin />
