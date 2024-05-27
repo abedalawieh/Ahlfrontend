@@ -52,6 +52,5 @@
   "devDependencies": {
     "@svgr/webpack": "^7.0.0",
     "@types/aos": "^3.0.4"
-  },
-
+  }
 }
